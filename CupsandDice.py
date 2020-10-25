@@ -23,6 +23,7 @@ class SixSidedDie():
     def roll(self):    
 
         self.faceValue = random.randint(1, self.sides)
+        
         return self.faceValue
 
     #Create a function that prints the face value
@@ -33,7 +34,7 @@ class SixSidedDie():
     #create the __repr__ function for the class that displays the facevalue and object class
     def __repr__(self):
 
-        print('SixSidedDie({})'.format(self.faceValue))
+        return 'SixSidedDie({})'.format(self.faceValue)
 
 
 
@@ -50,7 +51,7 @@ class TenSidedDie(SixSidedDie):
     #Create the __repr__ function for the class
     def __repr__(self):
 
-        print('TenSidedDie({})'.format(self.faceValue))
+        return 'TenSidedDie({})'.format(self.faceValue)
 
 
 
@@ -67,7 +68,7 @@ class TwentySidedDie(SixSidedDie):
     #Define the __repr__ format
     def __repr__(self):
 
-        print('TwentySidedDie({})'.format(self.faceValue))
+        return 'TwentySidedDie({})'.format(self.faceValue)
 
 
 
@@ -104,6 +105,7 @@ class Cup():
 
             self.dice.append(self.twentydie.roll())
         
+        
         return self.dice
             
     #Define the function that sums the face values
@@ -114,7 +116,9 @@ class Cup():
     #Define the repr formating function
     def __repr__(self):
 
-        print('Cup(SixSidedDie({}), TenSidedDie({}), TwentySidedDie({}))'.format(self.dice[0:self.numsix], self.dice[self.numsix:self.numsix + self.numten], self.dice[self.numsix + self.numten:]))
+        return 'Cup(SixSidedDie({}), TenSidedDie({}), TwentySidedDie({}))'.format(self.dice[0:self.numsix], self.dice[self.numsix:self.numsix + self.numten], self.dice[self.numsix + self.numten:])
+
+
 
 
 
